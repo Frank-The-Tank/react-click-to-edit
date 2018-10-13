@@ -22,7 +22,7 @@ class ClickToEdit extends React.Component {
       onEditMode: false
     });
     if (this.props.endEditing) {
-      this.props.endEditing(this.input.current.value, this.input.fieldAffected);
+      this.props.endEditing(this.input.current.value, this.input.current.textClass);
     }
   };
   handleEnterKey = e => {
