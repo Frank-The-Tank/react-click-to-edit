@@ -22,7 +22,7 @@ class ClickToEdit extends React.Component {
       onEditMode: false
     });
     if (this.props.endEditing) {
-      this.props.endEditing(this.input.current.value);
+      this.props.endEditing(this.input.current.value, this.input.current.fieldAffected);
     }
   };
   handleEnterKey = e => {
@@ -31,7 +31,7 @@ class ClickToEdit extends React.Component {
         onEditMode: false
       });
       if (this.props.endEditing) {
-        this.props.endEditing(this.input.current.value);
+        this.props.endEditing(this.input.current.value, this.input.current.fieldAffected);
       }
     }
   };
@@ -65,6 +65,7 @@ ClickToEdit.propTypes = {
   wrapperClass: PropTypes.string,
   inputClass: PropTypes.string,
   textClass: PropTypes.string,
+  fieldAffected: PropTypes.string,
   value: PropTypes.string.isRequired,
   endEditing: PropTypes.func.isRequired
 };
