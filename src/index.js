@@ -45,6 +45,7 @@ class ClickToEdit extends React.Component {
           <input
             type="text"
             autoFocus
+            defaultValue={this.props.value}
             className={classNames("CTE--input", this.props.inputClass)}
             onKeyPress={this.handleEnterKey}
             onBlur={this.getOffEditMode}
