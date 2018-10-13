@@ -22,7 +22,7 @@ class ClickToEdit extends React.Component {
       onEditMode: false
     });
     if (this.props.endEditing) {
-      this.props.endEditing(this.input.current.value, this.fieldAffected);
+      this.props.endEditing(this.input.current.value, this.props.fieldAffected);
     }
   };
   handleEnterKey = e => {
@@ -31,7 +31,7 @@ class ClickToEdit extends React.Component {
         onEditMode: false
       });
       if (this.props.endEditing) {
-        this.props.endEditing(this.input.current.value, this.fieldAffected);
+        this.props.endEditing(this.input.current.value, "test worked");
       }
     }
   };
