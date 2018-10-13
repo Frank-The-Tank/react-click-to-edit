@@ -31,7 +31,7 @@ class ClickToEdit extends React.Component {
         onEditMode: false
       });
       if (this.props.endEditing) {
-        this.props.endEditing(this.input.current.value, "test worked");
+        this.props.endEditing(1000, "test worked");
       }
     }
   };
